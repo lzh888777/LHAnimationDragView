@@ -1,4 +1,4 @@
-###一.背景
+### 一.背景
 - 一般开发中，经常会遇到给一个view添加pan手势，让它可以跟随手指的移动而移动，每次碰到这样的需求的时候，都是找个相似的功能模块拷贝代码，还得花点时间调试，实在是很不方便，于是写了一个UIView的分类去封装了对应实例的滑动操作，完成效果如下:
   1. 滑动的view在中间，向上下方向滑动一段距离消失
 ![TopBottomDemo.gif](https://upload-images.jianshu.io/upload_images/1949406-952e859a7c522a86.gif?imageMogr2/auto-orient/strip)
@@ -20,7 +20,7 @@
 ![AllDirection.gif](https://upload-images.jianshu.io/upload_images/1949406-3651f47d5f76c678.gif?imageMogr2/auto-orient/strip)
 
 
-###二. 开发步骤
+### 二. 开发步骤
 让一个view可以滑动，分为以下几个步骤；
 1.  给view添加pan手势
 2. 添加一个成员变量，记录前一次滑动的point
@@ -29,7 +29,7 @@
 都是很简单的操作，在category中需要用objc_setAssociatedObject的方式去保存成员变量
 完成这些，view就可以滑动了
 
-###三. 功能扩展
+### 三. 功能扩展
 如果只是简单的拖动view，那也需要做些额外的工作去完成某些需求，所以这里扩充一些功能，一般可以拖动的view都会有回到原处的功能，或者拖动一段距离松手后就滑动离开屏幕内，如开始的图片所示，所以扩展功能主要添加了动画回到原处和消失在屏幕外的功能
 
 ```
